@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic SQL Formatter</title>
+        <script type="text/javascript">
+            function convertSQL() {
+                let rawSQL = document.getElementById('inputSQL').value.trim();
+                let dynamicSQL = "'" + rawSQL.replaceAll("'","''") + "'";
+                document.getElementById('outputSQL').value = dynamicSQL;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Input SQL</p>
+        <textarea id="inputSQL" rows="25" cols="150">Paste SQL here</textarea>
+        <button onclick="convertSQL()">Convert</button>
+        <p>Output SQL</p>
+        <textarea id="outputSQL" rows="25" cols="150"></textarea>
+    </body>
+</html>
